@@ -7,8 +7,8 @@
   <title>자판기</title>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean"
     rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
   <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -20,37 +20,37 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img class="display_img" src="img/album01.png" alt="비틀즈 앨범" />
+            <img class="display_img" id="popimg01" src="img/album01.png" alt="비틀즈 앨범" />
             <div class="item" id="item01" onClick="buy(this)">
               <span class="price">29900</span>원
             </div>
           </div>
           <div class="swiper-slide">
-            <img class="display_img" src="img/album02.png" alt="adoy 앨범" />
+            <img class="display_img" id="popimg02" src="img/album02.png" alt="adoy 앨범" />
             <div class="item" id="item02" onClick="buy(this)">
               <span class="price">65000</span>원
             </div>
           </div>
           <div class="swiper-slide">
-            <img class="display_img" src="img/album03.png" alt="bts 앨범" />
+            <img class="display_img" id="popimg03" src="img/album03.png" alt="bts 앨범" />
             <div class="item" id="item03" onClick="buy(this)">
               <span class="price">87500</span>원
             </div>
           </div>
           <div class="swiper-slide">
-            <img class="display_img" src="img/album04.png" alt="아이유 앨범" />
+            <img class="display_img" id="popimg04" src="img/album04.png" alt="아이유 앨범" />
             <div class="item" id="item04" onClick="buy(this)">
               <span class="price">70300</span>원
             </div>
           </div>
           <div class="swiper-slide">
-            <img class="display_img" src="img/album05.png" alt="Honne 앨범" />
+            <img class="display_img" id="popimg05" src="img/album05.png" alt="Honne 앨범" />
             <div class="item" id="item05" onClick="buy(this)">
               <span class="price">42100</span>원
             </div>
           </div>
           <div class="swiper-slide">
-            <img class="display_img" src="img/album06.png" alt="bts 앨범" />
+            <img class="display_img" id="popimg06" src="img/album06.png" alt="bts 앨범" />
             <div class="item" id="item06" onClick="buy(this)">
               <span class="price">10900</span>원
             </div>
@@ -81,12 +81,13 @@
           <button id="10cent" value="0.10">$ 0.10</button>
           <button id="25cent" value="0.25">$ 0.25</button>
           <button id="50cent" value="0.50">$ 0.50</button>
-          <button id="1" value="1">$ 1</button>
-          <button id="2" value="2">$ 2</button>
-          <button id="5" value="5">$ 5</button>
-          <button id="10" value="10">$ 10</button>
-          <button id="20" value="20">$ 20</button>
-          <button id="50" value="50">$ 50</button>
+          <button id="1dollar" value="1">$ 1</button>
+          <button id="2dollar" value="2">$ 2</button>
+          <button id="5dollar" value="5">$ 5</button>
+          <button id="10dollar" value="10">$ 10</button>
+          <button id="20dollar" value="20">$ 20</button>
+          <button id="50dollar" value="50">$ 50</button>
+          <button id="100dollar" value="100">$ 100</button>
         </div>
         <div class="show_amount">
           <input id="dollarmoneycount" class="show_input" type="text" value="0" readonly />
@@ -99,8 +100,7 @@
     </div>
 
     <div class="receive_part">
-       
-      <div class="receive" id = "receive_list">
+      <div class="receive" id="receive_list">
       <h2>받는 곳</h2>
       </div>
       <div class="return">
