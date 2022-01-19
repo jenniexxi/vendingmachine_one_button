@@ -10,7 +10,6 @@
   margin-bottom: 50px;
 }
 .display_part {
-  /* overflow: hidden; */
   padding-bottom: 30px;
 }
 .entrance_part {
@@ -30,6 +29,7 @@
   display: block;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  cursor: pointer;
 }
 .display_part .item {
   height: 30px;
@@ -51,9 +51,6 @@
   color: #222;
   font-weight: 600;
   padding: 20px 0 10px 0;
-}
-.container h2 .type {
-  font-size: 12px;
 }
 .entrance_part .btn_money img {
   width: 92px;
@@ -103,15 +100,16 @@
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-}
-.swiper-wrapper{
-  overflow: hidden;
+  padding-bottom: 30px;
 }
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
   border-radius: 3px;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 0;  
 }
 
 .receive_part {
@@ -154,10 +152,60 @@
 }
 
 
+/*popup*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background: #fefefe;
+  margin: 10% auto;
+  padding: 25px;
+  border: 1px solid #d9d9d9;
+  width: 80%;
+  position: relative;
+  border-radius: 3px;
+}
+.close {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+}
+.modal h3 {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.modal img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+.modal .desc {
+  font-size: 12px;
+  padding-top: 20px;
+}
+.modal .title {
+  font-weight: 600;
+  padding-bottom: 20px;
+}
 
 
 
 @media screen and (min-width: 680px) {
+  .swiper-container {
+    padding-bottom: 0;
+  }
   .swiper-container .swiper-wrapper {
     display: inline-block;
     padding-left: 2%;
@@ -167,11 +215,10 @@
     float: left;
     margin: 2%;
   }
-  
-
+  .swiper-wrapper{
+    overflow: hidden;
+  }
+  .modal-content {
+    width: 400px
+  }
 }
-
-
-
-
-
